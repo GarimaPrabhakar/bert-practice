@@ -1,0 +1,19 @@
+/home/garima/miniconda3/envs/pg/bin/bert
+bert.cfg
+all
+createParaMesh -v -d 3 -z 59.3349 -b 500 -l 0.0 -p 5 -a 0 -o mesh/mesh scheme3d.data
+tetgen -pazACVq1.3T1e-12 mesh/mesh.poly
+mv mesh/mesh.1.edge mesh/mesh.edge
+mv mesh/mesh.1.ele mesh/mesh.ele
+mv mesh/mesh.1.face mesh/mesh.face
+mv mesh/mesh.1.node mesh/mesh.node
+meshconvert -v -MDB -iT mesh/mesh
+polyConvert -V -o mesh/meshPoly mesh/mesh
+dcedit -v -B -S --filter="rhoa<0" --filter="rhoa>9e99" --filter="ip<-9e99" --filter="ip>9e99" --filter="k>9e99:A" --filter="err>9e99" -e 3 -u 100e-6 -o scheme3d.data.data scheme3d.data
+dcinv -v -S -J -c1 -i20 -l20 -p mesh/mesh.bms scheme3d.data.data
+/home/garima/miniconda3/envs/pg/bin/bert
+bert.cfg
+save
+/home/garima/miniconda3/envs/pg/bin/bert
+bert.cfg
+clean

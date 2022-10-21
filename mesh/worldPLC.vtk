@@ -1,0 +1,45 @@
+# vtk DataFile Version 3.0
+created by /home/wagner/miniconda3/conda-bld/pybert_1589108428817/work/bert/bert/dcfemlib/src/domain3d.cpp	1052	int Domain3D::saveVTK(const string&, bool) 
+ASCII
+DATASET POLYDATA
+POINTS 33 double
+-100	-100	0
+100	-100	0
+100	-100	-200
+-100	-100	-200
+-100	100	0
+100	100	0
+100	100	-200
+-100	100	-200
+-40	-40	0
+-20	-40	0
+0	-40	0
+20	-40	0
+40	-40	0
+-40	-20	0
+-20	-20	0
+0	-20	0
+20	-20	0
+40	-20	0
+-40	0	0
+-20	0	0
+0	0	0
+20	0	0
+40	0	0
+-40	20	0
+-20	20	0
+0	20	0
+20	20	0
+40	20	0
+-40	40	0
+-20	40	0
+0	40	0
+20	40	0
+40	40	0
+POLYGONS 6 30
+4	0	1	5	4	
+4	1	2	6	5	
+4	2	3	7	6	
+4	3	0	4	7	
+4	3	2	1	0	
+4	4	5	6	7	

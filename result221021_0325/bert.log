@@ -1,0 +1,51 @@
+[1;30m# Executing:  dcinv -v -S -J -c1 -i20 -l20 -p mesh/mesh.bms scheme3d.data.data [0m
+Sensors: 25, Data: 251
+SensorIdx: a b m n  Data: err i ip iperr k r rhoa u valid 
+ParaMesh:		Nodes: 1080	Cells: 5143	Boundaries: 1414
+Secmesh:		Nodes: 7733	Cells: 41144	Boundaries: 42868
+ParaDomain:		Nodes: 470	Cells: 1486	Boundaries: 3359
+Data min = 81.4276 Ohmm max = 144.545 Ohmm
+Data error: min = 1.08041% max = 33.6009%
+Starting resistivity = 102.12 Ohmm.
+min/max(dweight) = 2.97611/92.5571
+min/max(dweight) = 2.97611/92.5571
+Building constraints matrix
+constraint matrix of size(nBounds x nModel) 2585 x 1486
+check Jacobian: wrong dimensions: (0x0) should be (251x1486)  force: 1
+jacobian size invalid, forced recalc: 1
+calculating jacobian matrix (forced=1)...Using existing subpotentials for createJacobian.
+S(1/1-std::mt): 0.003:time: 0.723s
+sens sum: median = 0.588391 min = -1.79821 max = 5.80144
+... 0.729 s
+min data = 81.4276 max data = 144.545 (251)
+min error = 0.0108041 max error = 0.336009 (251)
+min response = 102.12 max response = 102.12 (251)
+min reference model = 102.12 max reference model = 102.12 (1486)
+0: rms/rrms(data, response) = 9.41596/8.2819%
+0: chi^2(data, response, error, log) = 1.88264
+0: Phi = 472.542 + 0 * 20 = 472.542
+Iter: 0
+solve CGLSCDWWtrans with lambda = 20
+Calculating response for model: min = 80.395 max = 116.31
+Using existing primary potentials.
+Forward: time: 2.599s
+Response: min = 74.7721 max = 177.647
+Reciprocity rms(modelReciprocity) 1.01583%, max: 5.25333%
+1: LS newModel: min = 80.395; max = 116.31
+1: LS newResponse: min = 72.9618; max = 176.792
+1: rms/rrms(data, LS newResponse) = 6.46407/5.58259%
+1: chi^2(data, LS newResponse, error, log) = 1.49878
+1: Phi = 376.193+1.24065*20=401.006
+Linesearch tau = 0.53
+Calculating response for model: min = 89.9608 max = 109.41
+Using existing primary potentials.
+Forward: time: 2.409s
+Response: min = 87.5712 max = 141.446
+Reciprocity rms(modelReciprocity) 0.517172%, max: 2.56764%
+1: Model: min = 89.9608; max = 109.41
+1: Response: min = 86.612; max = 140.974
+1: rms/rrms(data, Response) = 3.26578/3.37701%
+1: chi^2(data, Response, error, log) = 0.485744
+1: Phi = 121.922+0.3485*20=128.892
+Reached data fit criteria (chi^2 <= 1). Stop.
+IP min=0 max=0
