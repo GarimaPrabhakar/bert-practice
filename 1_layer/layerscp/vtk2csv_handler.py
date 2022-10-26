@@ -54,4 +54,4 @@ markered_points = np.concatenate((points, marker), 1)
 df = pd.DataFrame(markered_points)
 df.columns = ["x", "y", "z", "Resistivity/Ohmm", "Marker"]
 
-df.to_csv("test.csv", index=False)
+df.to_csv(fileOut, index=False)

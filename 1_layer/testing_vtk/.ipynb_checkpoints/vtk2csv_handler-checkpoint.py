@@ -9,11 +9,11 @@ import pandas as pd
 # inFile = sys.argv[1]
 # outFile = sys.argv[2]
 
-fileIn  = 'test.vtk'
+fileIn  = 'dcinv.result.vtk'
 fileOut  = 'output.csv'
 
 reader = vtk.vtkUnstructuredGridReader()
-reader.SetFileName('test.vtk')
+reader.SetFileName(fileIn)
 reader.ReadAllScalarsOn()
 reader.ReadAllVectorsOn()
 reader.Update()
@@ -25,11 +25,17 @@ converter = vtk.vtkCellDataToPointData()
 converter.ProcessAllArraysOn()
 converter.SetInputConnection(reader.GetOutputPort())
 converter.Update()
+
+# print(converter.GetOutput())
+# print(converter.GetOutput().GetPointData())
+# print(converter.GetOutput().GetPointData().GetArray('Resistivity/Ohmm'))
+# print(vtk_to_numpy(converter.GetOutput().GetPointData().GetArray('Resistivity/Ohmm')))
+
 arr = vtk_to_numpy(converter.GetOutput().GetPointData().GetArray('Resistivity/Ohmm'))
 
 points = np.array([(point_obj.GetPoint(i)[0], point_obj.GetPoint(i)[1], point_obj.GetPoint(i)[2], arr[i]) for i in range(int(point_obj.GetNumberOfPoints()))])
 
-# Set markers for each point. Hard code for now, but figure out a way to do this from rho.map
+# Set markers for each point. Hard Code for now, but figure out a way to do this from rho.map
 rho_map = [5, 100]
 layer = -5
 marker = []
