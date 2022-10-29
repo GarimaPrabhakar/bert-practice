@@ -1,4 +1,4 @@
-bertNew3D > bert.cfg scheme3d.data
+# bertNew3D > bert.cfg scheme3d.data
 bert bert.cfg all
 
 # find . ! -name 'dcinv.result.vtk' -type d -exec rm -r -f {} +
@@ -16,6 +16,7 @@ mv build_model.sh essential/build_model.sh
 mv bert.cfg essential/bert.cfg
 mv invert.sh essential/invert.sh
 mv vtk2csv_handler.py essential/vtk2csv_handler.py
+mv optimize.sh essential/optimize.sh
 
 mv essential ..
 

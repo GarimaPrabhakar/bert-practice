@@ -9,8 +9,8 @@ polyConvert -v -V -o $MESH'only' $MESH # save world as a vtk
 
 # Create layer 1
 polyCreateWorld -m 2 $MESH'cube2'
-polyScale -x 198  -y 198 -z 5 $MESH'cube2'
-# polyTranslate -z -0.5 $MESH'cube2'
+polyScale -x 198  -y 198 -z 198 $MESH'cube2'
+polyTranslate -z -1 $MESH'cube2'
 
 polyConvert -v -V -o $MESH'cube2PLC' $MESH'cube2' #save cube2 as a vtk
 
