@@ -1,4 +1,4 @@
-cd ..
+ cd ..
 cd adam_optimization
 
 # bertNew3D > bert.cfg scheme3d.data
