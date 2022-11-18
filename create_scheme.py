@@ -2,7 +2,7 @@ import pygimli as pg
 import pybert as pb
 import numpy as np
 
-def createSensorArray(inits, deltas, num_electrodes = 25, num_rows=5):
+def createSensorArray(inits, deltas, num_electrodes = 64, num_rows=5):
     p = pg.core.R3Vector(num_electrodes)
     #p = pg.core.RVector(2)
     xinit = inits[0]

@@ -1,0 +1,525 @@
+Last login: Wed Nov 16 10:04:19 on ttys000
+-bash: /Users/gprabhakar/Applications/exelis/idl/bin/idl_setup.bash: No such file or directory
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Garimas-MacBook-Pro:ModifiedOhmpi gprabhakar$ cd ..
+(base) Garimas-MacBook-Pro:hom_model gprabhakar$ ls
+1_layer			create_scheme.py	rho.map
+Chargeability		homModelPointData.csv	scheme3d.data
+ModifiedOhmpi		layers			testing-layers
+bert.cfg		mesh
+build_model.sh		result221021_0325
+(base) Garimas-MacBook-Pro:hom_model gprabhakar$ nano create_scheme.py
+(base) Garimas-MacBook-Pro:hom_model gprabhakar$ python3 create_scheme.py
+Traceback (most recent call last):
+  File "/Users/gprabhakar/bert/bertsf/hom_model/create_scheme.py", line 2, in <module>
+    import pybert as pb
+ModuleNotFoundError: No module named 'pybert'
+(base) Garimas-MacBook-Pro:hom_model gprabhakar$ history
+    5           
+    6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              0  0                              0                                    0                0                                                   0  0 0 00 0                        0                                                000000 0000         0 00 0 0 0  0000         0                           00   00000000000000000000000000000000000000       0                                                                                                                                                                   0000000000000000
+    7  bert gallery.cfg show
+    8  bert
+    9  echo $PATH
+   10  echo $PATH
+   11  bert
+   12  export PATH=$PATH:/Users/gprabhakar/miniconda3/envs/py38clone/lib/python3.8/site-packages/bert/build/bin
+   13  bert
+   14  export PYTHONPATH=$PYTHONPATH:/Users/gprabhakar/miniconda3/envs/py38clone/lib/python3.8/site-packages/bert/bert/python
+   15  bert
+   16  bertNew2D
+   17  cd gallery
+   18  ls
+   19  bert gallery.cfg all
+   20  conda activate pg2022-clone
+   21  bert gallery.cfg all
+   22  dcedit
+   23  cd
+   24  ls
+   25  cd miniconda3
+   26  ls
+   27  cd lib
+   28  cd ..
+   29  ls
+   30  cd envs
+   31  ls
+   32  cd pg2022-clone
+   33  ls
+   34  cd lib/python3.8
+   35  cd lib
+   36  ls
+   37  cd python3.8
+   38  cd ..
+   39  open lib
+   40  cd ipython-in-depth
+   41  jupyter lab
+   42  jupyter lab
+   43  conda activate pg2022-clone
+   44  cd miniconda3
+   45  cd envs/pg2022-clone
+   46  ls
+   47  cd lib
+   48  ls
+   49  cd python3.8/site-packages
+   50  cd python3.8
+   51  cd open
+   52  open
+   53  cd ..
+   54  open lib
+   55  cd
+   56  cd test_compiling
+   57  brew
+   58  python3
+   59  brew install python3
+   60  brew install boost --with-python3
+   61  brew install boost-python3
+   62  brew update
+   63  git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
+   64  brew update
+   65  brew upgrade
+   66  brew install boost --with-python
+   67  brew install boost
+   68  brew install boost-python3
+   69  brew install mercurial
+   70  brew info wget
+   71  brew install wget
+   72  brew info wget
+   73  brew info mercurial
+   74  brew info tar
+   75  tar
+   76  git
+   77  subversion
+   78  brew install subversion
+   79  brew info subversion
+   80  brew install subversion
+   81  brew info cmake
+   82  brew info gcc
+   83  brew info python3
+   84  brew info numpy-dev
+   85  pip3 install scipy
+   86  pip3 install numpy
+   87  pip3 install matplotlib
+   88  ls
+   89  mkdir -p ~/src
+   90  ls
+   91  cd src
+   92  cd
+   93  ls
+   94  cd src
+   95  mkdir -p gimli
+   96  ls
+   97  cd gimli
+   98  git clone https://github.com/gimli-org/gimli.git
+   99  mkdir -p build
+  100  cd build
+  101  ce
+  102  cd
+  103  cd usr
+  104  cd local
+  105  cd cellar
+  106  brew info python3
+  107  sudo xcodebuild -license accept
+  108  brew info python3
+  109  cd src
+  110  cd gimli
+  111  ls
+  112  cd build
+  113  cmake ../gimli -DPYTHON_EXECUTABLE=/usr/local/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/local/Cellar/python3/3.10.7/Frameworks/Python.framework/Versions/3.10/include/python3.10m -DPYTHON_LIBRARY=/usr/local/Cellar/python3/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/libpython3.10.dylib -DPY_NUMPY=/usr/local/lib/python3.10/site-packages/numpy
+  114  echo $PATH
+  115  export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/bin/c++:/usr/bin/make
+  116  echo $PATH
+  117  cmake ../gimli -DPYTHON_EXECUTABLE=/usr/local/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/local/Cellar/python3/3.10.7/Frameworks/Python.framework/Versions/3.10/include/python3.10m -DPYTHON_LIBRARY=/usr/local/Cellar/python3/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/libpython3.10.dylib -DPY_NUMPY=/usr/local/lib/python3.10/site-packages/numpy
+  118  xcode-select: Failed to locate 'make', requesting installation of command line developer tools.
+  119  sudo xcode-select -switch /Library/Developer/CommandLineTools
+  120  cd src/gimli
+  121  ls
+  122  cd build
+  123  cmake
+  124  cmake ../gimli -DPYTHON_EXECUTABLE=/usr/local/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/local/Cellar/python3/3.10.7/Frameworks/Python.framework/Versions/3.10/include/python3.10m -DPYTHON_LIBRARY=/usr/local/Cellar/python3/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/libpython3.10.dylib -DPY_NUMPY=/usr/local/lib/python3.10/site-packages/numpy
+  125  export CPLUS_INCLUDE_PATH=/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/Headers
+  126  make -j 8
+  127  export CPLUS_INCLUDE_PATH=/usr/local/Cellar/python3/3.10.7/Frameworks/Python.framework/Versions/3.10/Headers
+  128  make -j 8
+  129  cd
+  130  cd src_test
+  131  mkdir bert
+  132  cd bert
+  133  git clone https://gitlab.com/resistivity-net/bert.git
+  134  mkdir build
+  135  cd build
+  136  cmake ../bert
+  137  cd ../../
+  138  ls
+  139  cmake ../bert -DGIMLI_LIBRARIES=/../../pygimli1.1-copy/lib/python3.8/site-packages/pygimli/core -DGIMLI_INCLUDE_DIR=../../pygimli1.1-copy/include/gimli/src
+  140  ls
+  141  cd bert
+  142  cd build
+  143  ls
+  144  cmake ../bert -DGIMLI_LIBRARIES=/../../pygimli1.1-copy/lib/python3.8/site-packages/pygimli/core -DGIMLI_INCLUDE_DIR=../../pygimli1.1-copy/include/gimli/src
+  145  make
+  146  ls
+  147  cd
+  148  ls
+  149  cd
+  150  open /Users/gprabhakar/src/gimli/build/CMakeFiles/CMakeError.log
+  151  history
+  152  ssh -p 2222 garima@localhost
+  153  bert
+  154  bert
+  155  ssh -p 2222 garima@10.0.2.15
+  156  ssh -p 2222 garima@10.0.2.15 -vvv
+  157  ping raspberyy
+  158  ping 10.0.2.15
+  159  ssh -p 2222 garima@10.0.2.15 -vvv
+  160  ssh garima@10.0.2.15 -p 2222
+  161  ssh garima@10.0.2.15 -p 2222
+  162  ssh garima@10.0.2.15 -p 2222
+  163  ssh garima@10.0.2.15 -p 2222 -vvv
+  164  ssh garima@10.0.2.15
+  165  ping garima@10.0.2.15
+  166  ssh root@127.0.0.1 -p 2222
+  167  ssh garima@127.0.0.1 -p 2222
+  168  ping 127.0.0.1
+  169  ssh -p 2222 ubuntu@localhost
+  170  ssh -p 2222 garima@localhost
+  171  ping garima@localhost
+  172  ping ubuntu@localhost
+  173  sudo apt-get update
+  174  ssh -p 2222 garima@localhost
+  175  ping garima@localhost
+  176  ping garima@garima-VirtualBox
+  177  vboxmanage
+  178  VM_NAME="MyFirstUbuntu"
+  179  vboxmanage modifyvm $VM_NAME --natpf1 "guestssh,tcp,,2222,,22"
+  180  vboxmanage modifyvm $VM_NAME --natpf1 "guestssh,tcp,,2222,,22"
+  181  vboxmanage modifyvm $VM_NAME --natdnshostresolver1 on
+  182  vboxmanage startvm $VM_NAME
+  183  ssh -p 2222 garima@localhost
+  184  ssh -p 2222 garima@localhost
+  185  ssh -p 2222 garima@localhost
+  186  vboxmanage startvm $VM_NAME
+  187  echo $VM_NAME
+  188  VM_NAME="MyFirstUbuntu"
+  189  vboxmanage startvm $VM_NAME
+  190  vboxmanage startvm $VM_NAME
+  191  ssh -p 2222 garima@localhost
+  192  cd bert_tutorials
+  193  jupyter lab
+  194  vboxmanage startvm $VM_NAME
+  195  VM_NAME="MyFirstUbuntu"
+  196  vboxmanage startvm $VM_NAME
+  197  ssh -p 2222 garima@localhost
+  198  VM_NAME="MyFirstUbuntu"
+  199  vboxmanage startvm $VM_NAME
+  200  ssh -p 2222 garima@localhost
+  201  VBoxManage sharedfolder add $VM_NAME --name bertsf --hostpath “bert/bertsf“
+  202  echo $VM_NAME
+  203  VM_NAME="MyFirstUbuntu"
+  204  VBoxManage sharedfolder add $VM_NAME --name bertsf --hostpath “bert/bertsf“
+  205  VBoxManage sharedfolder add $VM_NAME --name bertsf --hostpath “bert/bertsf“
+  206  jupyter notebook
+  207  VBoxManage modifymedium --compact “VirtualBox VMs/MyFirstUbuntu/MyFirstUbuntu.vdi”
+  208  VBoxManage modifymedium --compact “VirtualBox VMs/MyFirstUbuntu/MyFirstUbuntu.vdi
+  209   VBoxManage modifymedium --compact VirtualBoxVMs/MyFirstUbuntu/MyFirstUbuntu.vdi
+  210  vboxmanage startvm $VM_NAME
+  211  VM_NAME="MyFirstUbuntu"
+  212  vboxmanage startvm $VM_NAME
+  213  vboxmanage startvm $VM_NAME
+  214  VBoxManage modifymedium --compact ‘VirtualBox VMs/MyFirstUbuntu/MyFirstUbuntu.vdi’
+  215  VBoxManage modifymedium --compact VirtualBox\ VMs/MyFirstUbuntu/MyFirstUbuntu.vdi
+  216  cd
+  217  VBoxManage modifymedium --compact VirtualBox\ VMs/MyFirstUbuntu/MyFirstUbuntu.vdi
+  218  vboxmanage startvm $VM_NAME
+  219  ssh -p 2222 garima@localhost
+  220  vboxmanage startvm $VM_NAME
+  221  ssh -p 2222 garima@localhost
+  222  paraview
+  223  df -h
+  224  scp -r garima@localhost:miniconda3/envs/pg/share/examples/modelling/my3dmodel bert/
+  225  ssh garima@localhost
+  226  scp -r garima@localhost:miniconda3/envs/pg/share/examples/modelling/my3dmodel bert/ -p 2222
+  227  scp -r garima@localhost:miniconda3/envs/pg/share/examples/modelling/my3dmodel bert/ -P 2222
+  228  scp -P 2222 -r garima@localhost:miniconda3/envs/pg/share/examples/modelling/my3dmodel bert/
+  229  cd bert
+  230  ls
+  231  cd my3dmodel
+  232  ls
+  233  cd result221014_1759
+  234  ls
+  235  nano resistivity.vector
+  236  scp -P 2222 -r garima@localhost:miniconda3/envs/pg/share/examples/modelling bert/
+  237  scp -P 2222 -r garima@localhost:miniconda3/envs/pg/share/examples/modelling bert/
+  238  scp -P 2222 -r garima@localhost:miniconda3/envs/pg/share/examples/modelling/last3dpractice bert/
+  239  cd bert_tutorials
+  240  ls
+  241  jupyter lab
+  242  VM_NAME="MyFirstUbuntu"
+  243  vboxmanage startvm $VM_NAME
+  244  ssh -p 2222 garima@localhost
+  245  vboxmanage startvm $VM_NAME
+  246  vboxmanage startvm $VM_NAME
+  247  ssh -p 2222 garima@localhost
+  248  vboxmanage startvm $VM_NAME
+  249  ssh -p 2222 garima@localhost
+  250  ssh -p 2222 garima@localhost
+  251  00~VBoxManage
+  252  cd
+  253  cd ipython-in-depth/5cl
+  254  jupyter lab
+  255  VM_NAME="MyFirstUbuntu"
+  256  vboxmanage startvm $VM_NAME
+  257  tetgen
+  258  tetgen -h
+  259  polyCreateCube
+  260  VM_NAME="MyFirstUbuntu"
+  261  vboxmanage startvm $VM_NAME
+  262  ssh -p 2222 garima@localhost
+  263  ssh -p 2222 garima@localhost
+  264  ls
+  265  cd bert
+  266  ls
+  267  adduser
+  268  ls
+  269  cd bertsf
+  270  ls
+  271  VM_NAME="MyFirstUbuntu"
+  272  vboxmanage startvm $VM_NAME
+  273  ssh -p 2222 garima@localhost
+  274  vboxmanage startvm $VM_NAME
+  275  ssh -p 2222 garima@localhost
+  276  ls
+  277  ssh -p 2222 garima@localhost
+  278  vboxmanage startvm $VM_NAME
+  279  ssh -p 2222 garima@localhost
+  280  cd ipython-in-dept
+  281  cd ipython-in-depth
+  282  jupyter lab
+  283  cd ipython-in-depth
+  284  jupyter lab
+  285  VM_NAME="MyFirstUbuntu"
+  286  vboxmanage startvm $VM_NAME
+  287  ssh -p 2222 garima@localhost
+  288  polyAddProfile
+  289  VM_NAME="MyFirstUbuntu"
+  290  vboxmanage startvm $VM_NAME
+  291  ssh -p 2222 garima@localhost
+  292  cd bert/bertsf
+  293  ls
+  294  cd hom_model
+  295  git init
+  296  git add .
+  297  git commit -m "first commit"
+  298  git branch -M main
+  299  git remote add origin git@github.com:GarimaPrabhakar/bert-practice.git
+  300  git push -u origin main
+  301  git remote add origin https://github.com/GarimaPrabhakar/bert-practice.git
+  302  git remote -v
+  303  git push origin
+  304  git push --set-upstream origin main
+  305  git remote -v
+  306  git rm origin
+  307  git remote rm origin
+  308  git remote -v
+  309  git remote add origin https://github.com/GarimaPrabhakar/bert-practice.git
+  310  git push -u origin main
+  311  git push -u origin main
+  312  nano .git/config
+  313  git push -u origin main
+  314  ls -al ~/.ssh
+  315  ssh-keygen -t ed25519 -C "garima.prabhakar3@gmail.com"
+  316  eval "$(ssh-agent -s)"
+  317  open ~/.ssh/config
+  318  touch ~/.ssh/config
+  319  nano ~/.ssh/config
+  320  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+  321  pbcopy < ~/.ssh/id_ed25519.pub
+  322  git push -u origin main
+  323  VM_NAME="MyFirstUbuntu"
+  324  vboxmanage startvm $VM_NAME
+  325  ssh -p 2222 garima@localhost
+  326  cd bert/bertsf
+  327  ls
+  328  cd hom_model
+  329  git add .
+  330  git commit -m "basic one layer case"
+  331  git push -u origin main
+  332  git add .
+  333  git commit -m "point data added"
+  334  git push -u origin main
+  335  ls
+  336  conda envs list
+  337  conda env list
+  338  conda activage py38clone
+  339  conda activate py38clone
+  340  conda install paraview
+  341  VM_NAME="MyFirstUbuntu"
+  342  vboxmanage startvm $VM_NAME
+  343  ssh -p 2222 garima@localhost
+  344  cd bert/bertsf
+  345  ls
+  346  cd hom_model
+  347  git add .
+  348  git commit -m "testing with vtk package"
+  349  git push -u origin main
+  350  cd 1_layer
+  351  cd testing_vtk
+  352  python3 vtk2csv_handler.py
+  353  python3 vtk2csv_handler.py
+  354  python3 vtk2csv_handler.py
+  355  git add .
+  356  git commit -m "added vtk to csv file converter"
+  357  git commit -m "converting vtk to csv files"
+  358  git push -u origin main
+  359  mkdir test
+  360  cd test
+  361  find . ! -name 'test.vtk' -type f -exec rm -f {} +
+  362  find . ! -name 'test.vtk' -type f -exec rm -f {} +
+  363  find . ! -name 'test.vtk' -type f -exec rm -f {} +
+  364  find . ! -name 'file.txt' -type d -exec rm -r -f {} +
+  365  find . ! -name 'test.vtk' -type f -exec rm -f {} +
+  366  VM_NAME="MyFirstUbuntu"
+  367  cd ..
+  368  ls
+  369  cd ..
+  370  cd layerscp
+  371  ls
+  372  bash invert.sh
+  373  ls
+  374  cd ..
+  375  cd layerscp
+  376  python3 vtk2csv_handler.py
+  377  python3 vtk2csv_handler.py
+  378  python3 vtk2csv_handler.py
+  379  python3 vtk2csv_handler.py
+  380  bash invert.sh
+  381  ls
+  382  cd ..
+  383  cd layerscp
+  384  ls
+  385  cd ..
+  386  cd ..
+  387  git add .
+  388  git commit -m "automated inversion/file conversion"
+  389  git push -u origin main
+  390  bash build_model.sh
+  391  python3
+  392  conda create -n "mypy3env" python=3
+  393  pip install vtk
+  394  python3
+  395   
+  396  jupyter notebook
+  397  jupyter lab
+  398  VM_NAME="MyFirstUbuntu"
+  399  vboxmanage startvm $VM_NAME
+  400  ssh -p 2222 garima@localhost
+  401  cd ipython-in-depth
+  402  jupyter lab
+  403  cd bert/bersf
+  404  cd bert
+  405  ls
+  406  cd bertsf
+  407  cd hom_model/1_layer
+  408  ls
+  409  cd adam_optimization
+  410  ls
+  411  jupyter lab
+  412  VM_NAME="MyFirstUbuntu"
+  413  vboxmanage startvm $VM_NAME
+  414  ssh -p 2222 garima@localhost
+  415  cd bert
+  416  ls
+  417  cd ..
+  418  cd ..
+  419  git add .
+  420  git commit -m "friday updates (in the middle of adam algorithm)"
+  421  git push -u origin main
+  422  VM_NAME="MyFirstUbuntu"
+  423  vboxmanage startvm $VM_NAME
+  424  ssh -p 2222 garima@localhost
+  425  cd ipython-in-depth
+  426  jupyter lab
+  427  cd ipython-in-depth
+  428  jupyter lab
+  429  cd ipython-in-depth
+  430  cd 5cl
+  431  git clone git@github.com:AyushmaanAggarwal/Physics-5CL-Capstone-Project.git
+  432  ls
+  433  cd Physics-5CL-Capstone-Project
+  434  jupyter lab
+  435  cd
+  436  history
+  437  git add .
+  438  git commit -m "very important commit"
+  439  git push origin master
+  440  git remote -v
+  441  git push origin
+  442  ssh pi@raspberrypi.local
+  443  ssh pi@raspberrypi.local -vvv
+  444  ping raspberrypi.local
+  445  ssh pi@raspberrypi.local
+  446  ssh pi@raspberrypi.local
+  447  ping raspberrypi.local
+  448  ssh pi@raspberrypi.local
+  449  history
+  450  ssh pi@raspberry.local
+  451  ssh pi@raspberrypi.local
+  452  ping raspberrypi.local
+  453  ping
+  454  ssh pi@raspberrypi.local -vvv
+  455  ping raspberrypi.local
+  456  ping pi@raspberrypi.local
+  457  ping pi@raspberrypi.local
+  458  ping pi@raspberrypi.local
+  459  ping raspberrypi.local
+  460  ssh pi@raspberrypi.local
+  461  ssh pi@raspberrypi.local
+  462  ssh pi@raspberrypi.local
+  463  ssh pi@raspberrypi.local
+  464  cd bert/bertsf
+  465  jupyter lab
+  466  ls
+  467  ping pi@raspberrypi.local
+  468  ping raspberrypi.local
+  469  scp pi@raspberrypi.local scheme3d.ohm
+  470  scp pi@raspberrypi.local:scheme3d.ohm
+  471  ssh pi@raspberrypi.local
+  472  ssh pi@raspberrypi.local
+  473  ssh pi@raspberrypi.local
+  474  iconfig -a
+  475  scp pi@192.168.2.1:scheme3d.ohm
+  476  scp scheme3d.ohm pi@192.168.2.1
+  477  scp scheme3d.ohm pi@192.168.2.1:Ohmpi/
+  478  scp scheme3d.ohm pi@192.168.2.1:Ohmpi/
+  479  scp scheme3d.ohm pi@raspberrypi.local:Ohmpi/
+  480  cd bert
+  481  cd bertsf/hom_model
+  482  git add .
+  483  git commit -m "added calibration and testing files (NOT DEBUGGED YET :(()"
+  484  git push -u origin main
+  485  jupyter lab
+  486  git add .
+  487  git commit -m "really quick proof of concept for induced polarization that took me way too long so I scrapped it before I actually calculated resistivity "/"
+  488  ""
+  489  git commit -m "really quick proof of concept for induced polarization that took me way too long so I scrapped it before I actually calculated resistivity :("
+  490  git push -u origin main
+  491  git add .
+  492  git commit -m "Quick HF resistivity analysis (flawed lmao, need to interpolate between DC and HF voltage to match with analytical function)"
+  493  git push -u origin main
+  494  ssh pi@raspberrypi.local
+  495  ssh pi@raspberrypi.local
+  496  ssh pi@raspberrypi.local
+  497  ssh pi@raspberrypi.local
+  498  ssh pi@raspberrypi.local
+  499  jupyter lab
+  500  cd ..
+  501  ls
+  502  nano create_scheme.py
+  503  python3 create_scheme.py
+  504  history
+(base) Garimas-MacBook-Pro:hom_model gprabhakar$ VM_NAME="MyFirstUbuntu"
+(base) Garimas-MacBook-Pro:hom_model gprabhakar$ vboxmanage startvm $VM_NAME
+Waiting for VM "MyFirstUbuntu" to power on...
+VM "MyFirstUbuntu" has been successfully started.
+(base) Garimas-MacBook-Pro:hom_model gprabhakar$ 
