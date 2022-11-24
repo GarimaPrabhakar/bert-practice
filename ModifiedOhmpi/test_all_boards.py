@@ -8,7 +8,7 @@ import time , board, busio,adafruit_tca9548a
 from adafruit_mcp230xx.mcp23017 import MCP23017 
 import digitalio
 from digitalio import Direction
-
+import pandas as pd
 
 address_a=0X70# choose the mux board address 
 address_b=0X71
@@ -59,39 +59,48 @@ def switch_mux_off(electrode,address):
     mcp2.get_pin(a-1).value=False 
  
 
-def run_scheme(a, b, m, n):
+def run_scheme(a, b, m, n, fn="simple_rainfall.csv"):
+    df = read_csv("simple_rainfall.csv")
     for i in range(len(a)):
         switch_mux_on(a[i],address_a)
-        switch_mux_on(b[i],address_b)
-        switch_mux_on(m[i],address_m)
-        switch_mux_on(n[i],address_n)
+        # switch_mux_on(b[i],address_b)
+        # switch_mux_on(m[i],address_m)
+        # switch_mux_on(n[i],address_n)
         print('electrodes:',a[i], ' ', b[i], ' ', m[i], ' ', n[i],' activate' )
         time.sleep(activation_time)
 
         switch_mux_off(a[i],address_a)
-        switch_mux_off(b[i],address_b)
-        switch_mux_off(m[i],address_m)
-        switch_mux_off(n[i],address_n)
+        # switch_mux_off(b[i],address_b)
+        # switch_mux_off(m[i],address_m)
+        # switch_mux_off(n[i],address_n)
         print('electrodes:',a[i], ' ', b[i], ' ', m[i], ' ', n[i],' deactivate' )
         time.sleep(activation_time)
+        
+        # row = df.iloc[i]
+        print(f"Time: {df['time'][i]}  Injection Time: {df['inj time [ms]'][i]} Injected Current (A) {df['I [mA]'][i]}  Measured Potential (V): {df['Vmn [mV]'][i]}  Rhoa (ohmm): {df['Rhoa'][i]}  Acq. Depth (m): {df['z'][i]}")
+
+# def format_scheme(scheme_file):
+#     with open(scheme_file) as f:
+#     lines = f.readlines()
+
+#     start = lines.index('# a b m n err i ip iperr k r rhoa u valid \n')
+#     scheme = lines[start:][1:-1]
+
+#     elec_combos = np.array([scheme[i].split() for i in range(len(scheme))]).astype(float)
+
+#     a = np.transpose(elec_combos)[0]
+#     b = np.transpose(elec_combos)[1]
+#     m = np.transpose(elec_combos)[2]
+#     n = np.transpose(elec_combos)[3]
+
+#     return a, b, m, n
 
 def format_scheme(scheme_file):
-    with open(scheme_file) as f:
-    lines = f.readlines()
+    df = read_csv(scheme_file)
 
-    start = lines.index('# a b m n err i ip iperr k r rhoa u valid \n')
-    scheme = lines[start:][1:-1]
+    return df["A"].astype(int), df["B"].astype(int), df["M"].astype(int), df["N"].astype(int)
 
-    elec_combos = np.array([scheme[i].split() for i in range(len(scheme))]).astype(float)
-
-    a = np.transpose(elec_combos)[0]
-    b = np.transpose(elec_combos)[1]
-    m = np.transpose(elec_combos)[2]
-    n = np.transpose(elec_combos)[3]
-
-    return a, b, m, n
-
-def run_one_cycle(fn="scheme3d.shm", repeat=65):
+def run_one_cycle(fn="simple_rainfall.csv", repeat=10):
     a, b, m, n = format_scheme(fn)
     print("STARTING DIPOLE DIPOLE SCHEME FOR", len(a), "ELECTRODE COMBINATIONS")
     print("Time: ", time.ctime(time.time()))
@@ -109,7 +118,7 @@ def run_one_cycle(fn="scheme3d.shm", repeat=65):
 
 
 
-a=input('If you want to test one electrode combination, press 1. If you want to test one cycle, press 2.') 
+a=input('If you want to test one electrode combination, press 1. If you want to test one cycle, press 2. If youre going to cry yourself to sleep, press 3.') 
  
 if a=='1': 
     b=0 
@@ -117,7 +126,7 @@ if a=='1':
     electrode=int(input(' Choose your electrode number (integer):')) 
     switch_mux_on(electrode,address) 
     print('electrode:',electrode,' activate' ) 
-    time.sleep(activation_time) 
+    time.sleep(activation_time0) 
     switch_mux_off(electrode,address) 
     print('electrode:',electrode,' deactivate' ) 
      
@@ -130,6 +139,7 @@ if a== '2':
         print('electrode:',electrode,' deactivate' ) 
 
         time.sleep(activation_time) 
-
-if a not in ['1', '2']: 
+if a=='3':
+    run_one_cycle()
+if a not in ['1', '2', '3']: 
     print ("Wrong choice !") 
